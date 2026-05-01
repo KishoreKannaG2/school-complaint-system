@@ -7,7 +7,7 @@ import axios from "axios";
 
 // Create a pre-configured axios instance
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5001/api",
+  baseURL: process.env.REACT_APP_API_URL || "https://school-complaint-system.onrender.com/api",
 });
 
 // Interceptor: automatically attach JWT token to every request

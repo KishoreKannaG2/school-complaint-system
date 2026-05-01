@@ -57,7 +57,7 @@ const ComplaintCard = ({ complaint, isAdmin, onStatusChange, onDelete }) => {
           </button>
           {showImage && (
             <img
-              src={`http://localhost:5001/${complaint.image}`}
+              src={`https://school-complaint-system.onrender.com/${complaint.image}`}
               alt="Complaint"
               className="mt-2 rounded-xl w-full max-h-48 object-cover border border-slate-100"
             />
