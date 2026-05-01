@@ -19,8 +19,19 @@ const app = express();
 
 // ── Middleware ──────────────────────────────
 // Allow cross-origin requests from our React frontend
+const allowedOrigins = [
+  'https://school-compliain-system.netlify.app',
+  'http://localhost:3000'
+];
+
 app.use(cors({
-  origin: "https://school-compliain-system.netlify.app/",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
