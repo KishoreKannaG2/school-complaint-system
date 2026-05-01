@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 
+
 // Import our route files
 const authRoutes = require("./routes/authRoutes");
 const complaintRoutes = require("./routes/complaintRoutes");
@@ -39,7 +40,7 @@ app.use(cors({
 app.use(express.json());
 
 // Serve uploaded images as static files
-// e.g. http://localhost:5000/uploads/filename.jpg
+// e.g. https://school-complaint-system.onrender.com/uploads/filename.jpg
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ── Routes ──────────────────────────────────
